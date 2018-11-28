@@ -1,4 +1,4 @@
-/* @license C3.js v0.6.9 | (c) C3 Team and other contributors | http://c3js.org/ */
+/* @license C3.js v0.6.9-rc4-wc | (c) C3 Team and other contributors | http://c3js.org/ */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -42,7 +42,7 @@
 
   function ChartInternal(api) {
     var $$ = this;
-    $$.d3 = window.d3 ? window.d3 : typeof require !== 'undefined' ? require("d3") : undefined;
+    $$.d3 = typeof require !== 'undefined' ? require("d3") : window.d3 ? window.d3 : undefined;
     $$.api = api;
     $$.config = $$.getDefaultConfig();
     $$.data = {};
